@@ -43,12 +43,8 @@ for row in query_job:
   temp["__numpy__"] = row["__numpy__"]
   temp["dtype"] = row["dtype"]
   temp["shape"] = [(x if x < 128 else x - 256) for x in base64.b64decode(b'CgY=')]
-  print(f"temp : {type(temp)}")
   temp = json.dumps(temp)
   payload = json.loads(temp)
-  print(f"payload: {payload}")
-  print(f"payload type: {type(payload)}")
- 
   list_a.append(payload)
 
 train_df= pd.DataFrame(columns=[])
