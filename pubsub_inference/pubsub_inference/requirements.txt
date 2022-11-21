@@ -1,0 +1,7 @@
+tensorflow 
+keras
+json_numpy
+google-cloud-pubsub
+google-cloud-storage
+pandas
+numpy

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "neural-foundry-368217",
+  "private_key_id": "8faaa39ff85d7293c6ce5172084bb4523a80130e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCeQj4EFl6x5svo\nLR9fUpvs4nXyP815WpY8Yw6gXerXgNyaazrQ8JdhotILJo+ym8XhybDK7e8m9JO5\niBxKQQ4yu9gST/09Te6t692dNwsitS5KQ3mt2IDUBFyCvoD/0lWnVKNy/Gkch49v\nGYserMHLu1reN7vnFfbZchBAGm6tV9QYsmmksCckkLeh19mBp8jgWJyinMhylmL4\nB87rrfQjB7/Wb9CVtHSaMfWd+kakTX6T3uY+CTGegOsSWDCvcaZgQDYnLdbR5RVj\nmD3BOELGWcVE++/dmdCcSDADKpSe+KZZBp82B68jk5HXnDCHCgcHOEfS3ETWze5h\nwafb9qgzAgMBAAECggEAArLTduNgwvzR/kgCsG/qq7vi0foniUmzpRz1S2O+lOUk\nHdf1PUnU8vvBRCJosd15HtP/GT68ZLgn6rJ49QUt9kyArzNA+LIi/0E12q/tFy7q\ntqZ25TF7ZOIcJ7iS34nZHwzQ6q2GJ0/icL0JQ8EjXtN3hbGCmTqlJmkNAOLSf08o\ntJ/kmbfGqiJvQ/jqmpOz6d8N00IlSD69j5IMXhbyOdzJoS6v2BELiukpKw3s0vqa\nbO4Jet0G544HR1jYQILLqjdMAoEwHX+yEHEuhqt4Xz0vRWMpXwa0fOgzmPVnlJs/\nvalWYoWDEkfhQ02ZzNogDkWCaMPR5zrbwu8oi2uKsQKBgQDV+L6PmDK5Z6jKKkZN\n2YNz0qpBa2554Sl1sWfwryRseUjomm/cWFHL6AvMmZ+Sme+SayOSsaCiVuAfO8b1\neNxsiAOlCL0/OjBcFz0BkApxXoGNEA61LBTa/6Z2u2y7eVU5c3M7c/hb2ZA9hFoe\n5l84F5aB0x8uFJBGejpg6drFEQKBgQC9WA4lDEoGySOgZusZdecOBVO1hGNx3zGj\njfVx2UXDf1yuPEVcL2/OY97lu169dHLnzIjVk2TVPvA2KTzn+YV+VnhORa6laMmO\nUE8Z3RtAsSNbPWsNEBzz3jh1jLHtTcRVb7HY2gXMEC5FvI2HKGp1C3NXv1BZwQkV\nVsQ3zuzJAwKBgCw579lqUgG0hVTUDBgHP35vKrW+6OTUP2eONbev2813/DPnx/s5\nXh7RZa7yieMZYkVXU9D8WgF0B3stNeCDDLx6GJbCCavJ8Tj3rKpoBWCNciWgDgow\nhFcHxHaCIuVVHOJ1FHpTbCBABepRMvd0EnZbmcZXxvgVVATdOrfRXmChAoGBAI0H\nf1Gc+65eNskMn2QRa44H7bev6how8louLHkmKk5ZGQE2JztoodCKlsVqcECQ8d0x\nfWIHLP2gqW7N/G2UbxgQ8/7o7BKMIER+EMzk4Z2n0vvsnUXXkJkcFdWIfCaS2//+\n9+rbSaIbEzwiGxBmzBRt+PWMrB6OJ2Pbgr9GwxtdAoGBAKLUm+0zEpFH+KgEde68\n+9kCihDIkROBh28mpqxcPmW4E9JPXbGkFNWrxhO3ObeHZMhc9N3mlne3agDsnVA/\n06jEp2ZPGgWSjLtBnL6p6AafmOuSCKHIh4oa1btX2oi+Pp7oeSbskJUBX4pK49E/\n4w7CII/2U+M1wWJ0YWt2uwgO\n-----END PRIVATE KEY-----\n",
+  "client_email": "rajaparmar4218-gmail-com@neural-foundry-368217.iam.gserviceaccount.com",
+  "client_id": "103526830900482107715",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/rajaparmar4218-gmail-com%40neural-foundry-368217.iam.gserviceaccount.com"
+}
