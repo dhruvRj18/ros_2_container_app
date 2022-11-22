@@ -10,6 +10,8 @@ import pandas as pd
 import numpy as np
 
 import json_numpy
+from google.cloud import bigquery
+
 json_numpy.patch()
 
 from google.cloud import storage
@@ -20,8 +22,13 @@ credentials = service_account.Credentials.from_service_account_file(
     filename=key_path, scopes=["https://www.googleapis.com/auth/cloud-platform"],
 )
 
+#BigQuery client
+bigQ_client = bigquery.Client()
+table_id = "neural-foundry-368217.ros.grafana"
+
+
 subscriber = pubsub_v1.SubscriberClient()
-subscription_path = subscriber.subscription_path("neural-foundry-368217","Ros-sub")
+subscription_path = subscriber.subscription_path("neural-foundry-368217","beam_1669057201_6e5f10e")
 
 # Loading the autoencoder model
 storage_client = storage.Client()
@@ -39,9 +46,17 @@ def callback(message:pubsub_v1.subscriber.message.Message)-> None:
     if (message) is None:
         print("not received")
     in_sample =  json.loads(message.data)
-    #print("before: ", in_sample.shape)
+    for i in in_sample:
+        for a in range(len(i)):
+            time = f"{message.publish_time}"
+            time = time.replace(" ","T")
+            row = [{"should_lift":i[a],"elbow":i[1],"wrist1":i[2],"wrist2":i[3],"wrist3":i[4],"shoulder_pan":i[5],"timestamp":time}]
+            errors = bigQ_client.insert_rows_json(table_id, row)  # Make an API request.
+            if errors == []:
+                print("New rows have been added.")
+            else:
+                print("Encountered errors while inserting rows: {}".format(errors))
     in_sample = in_sample.reshape(in_sample.shape[0], 1, in_sample.shape[1])
-    #print("after: ", in_sample.shape)
     out_sample = model.predict(in_sample, verbose=0)
     difference = in_sample - out_sample
     loss_mae = np.mean(np.abs(difference), axis = 1)

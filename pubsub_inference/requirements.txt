@@ -3,5 +3,6 @@ keras
 json_numpy
 google-cloud-pubsub
 google-cloud-storage
+google-cloud-bigquery
 pandas
 numpy
