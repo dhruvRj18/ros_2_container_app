@@ -24,14 +24,15 @@ credentials = service_account.Credentials.from_service_account_file(
 )
 
 
+project_name = "nomadic-autumn-369912"
 
 
 
 client = bigquery.Client(credentials=credentials, project=credentials.project_id,)
 storage_client = storage.Client(credentials=credentials, project=credentials.project_id,)
-bucket = storage_client.bucket("ros2")
+bucket = storage_client.bucket("ros2_data")
 
-query = """SELECT * FROM `neural-foundry-368217.ros.rosdata` WHERE shape IS NOT null
+query = """SELECT * FROM `nomadic-autumn-369912.ros.rosdata` WHERE shape IS NOT null
  LIMIT 1000"""
 
 query_job = client.query(query)

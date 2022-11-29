@@ -14,9 +14,10 @@ key_path = "key1.json"
 credentials = service_account.Credentials.from_service_account_file(
     filename=key_path, scopes=["https://www.googleapis.com/auth/cloud-platform"],
 )
+project_name = "nomadic-autumn-369912"
 
-INPUT_TOPIC= "projects/neural-foundry-368217/topics/Ros2"
-BIGQUERY_TABLE = "neural-foundry-368217:ros.rosdata"
+INPUT_TOPIC= f"projects/{project_name}/topics/Ros2"
+BIGQUERY_TABLE = f"{project_name}:ros.rosdata"
 BIGQUERY_SCHEMA = "timestamp:TIMESTAMP,__numpy__:STRING,dtype:STRING,shape:BYTES"
 
 class CustomParsing(beam.DoFn):
@@ -44,7 +45,7 @@ def run():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--input_topic",
-        help='Input PubSub topic of the form "projects/neural-foundry-368217/topics/Ros2."',
+        help=f'Input PubSub topic of the form "projects/{project_name}/topics/Ros2."',
         default=INPUT_TOPIC,
     )
     parser.add_argument(
